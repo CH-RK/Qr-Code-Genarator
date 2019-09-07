@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><i><b>R | </b></i>- outinG</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a routerLink="dashboard">Home</a></li>
+      <li><a routerLink="tracks" *ngIf="_auth.loggedIn();">Tracks</a></li>
+      <li><a routerLink="albums" *ngIf="_auth.loggedIn();">Albums</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" *ngIf="_auth.loggedIn();">Mp3
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Latest Songs</a></li>
+          <li><a href="#">Telugu Songs</a></li>
+          <li><a href="#">Hindi Songs</a></li>
+        </ul>
+      </li>
+      <li><a routerLink="artist" *ngIf="_auth.loggedIn();">Artist</a></li> 
+      <li><a routerLink="downloads" *ngIf="_auth.loggedIn();">Downloads</a></li>
+      <li><a routerLink="qrCode">Show Qr Code</a></li>
+    </ul>
+    <ul class="nav">
+        <li class="pull-right"><button class="btn btn-danger"routerLink="register" *ngIf="!_auth.loggedIn()">SignUp</button></li>
+      <li class="pull-right"><button class="btn btn-danger" *ngIf="_auth.loggedIn();" (click)="_auth.loggedOut()">Logout</button></li>
+    </ul>
+
+  </div>
+</nav>
+
+
+
+<router-outlet></router-outlet>

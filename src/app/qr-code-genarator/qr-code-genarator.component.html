@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-offset-5"> 
+
+  <div class="col-md-4">
+      <label for="qrcode">Rakesh Chengelli</label>
+  </div>
+  <div class="col-md-6">
+    <qrcode [qrdata]="myAngularxQrCode" [size]="256" [level]="'M'"></qrcode>
+    <br><br>
+  </div>
+  
+</div>
+</div>
+<div class="row">
+<div class="col-md-offset-5">
+
+  <div class="col-md-3">
+    <input type="text" class="form-control" placeholder="Please enter to Genarate" [(ngModel)]='inputss'/>
+  </div>
+  <div class="col-md-6">
+    <button (click)="inputValue()" class="btn btn-info">Generate QR</button>
+  </div>
+
+</div>
+</div>
+
+

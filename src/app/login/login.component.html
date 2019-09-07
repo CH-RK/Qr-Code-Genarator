@@ -1,0 +1,35 @@
+    <div class="container">
+<h1 class="form-heading">login Form</h1>
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h2>Login to Verify</h2>
+   <p>Please enter your email and password</p>
+   </div>
+    <form id="Login">
+
+        <div class="form-group">
+
+
+            <input type="email" class="form-control" name="email" placeholder="Email Address" [(ngModel)]="logindata.email">
+
+        </div>
+
+        <div class="form-group">
+
+            <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="logindata.password">
+
+        </div>
+        <div class="forgot">
+        <a href="reset.html">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="postData()">Login</button>
+
+    </form>
+
+        <br>
+        <span> "email": "eve.holt@reqres.in"</span>
+        <span> "password": "cityslicka"</span>
+    </div>
+</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <h2><a href="">Tracks</a></h2>
+  <p>Latest Tracks & Latest Melodies & Latest Mp3 & Latest Pop Songs.</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Track Name</th>
+        <th>Movie Name</th>
+        <th>Download Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let track of trackData" [ngClass]="{
+      'success':track.moviename === 'Latest Telugu Rip',
+      'warning':track.DownloadLink === 'https://www.atozmp3.co.in',
+      'danger':track.moviename === 'Latest Bengali Rip',
+      'info':track.trackname === 'Hindi Songs',
+      'active':track.trackname ==='Punjab Songs'}">
+        <td>{{track.trackname}}</td>
+        <td>{{track.moviename}}</td>
+        <td><a href="#">{{track.DownloadLink}}</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
